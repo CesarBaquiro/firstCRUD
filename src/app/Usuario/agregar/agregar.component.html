@@ -1,0 +1,32 @@
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3>Agregar usuarios</h3>
+    </div>
+    <div class="card-body">
+
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <!-- Input nombre -->
+        <div class="form-group">
+          <label for=" nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="nombreInput">
+        </div>
+        <!-- Input email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" class="form-control" formControlName="email"
+            [(ngModel)]="emailInput">
+        </div>
+        <!-- Input prioridad -->
+        <div class="form-group">
+          <label for="prioridad">Prioridad</label>
+          <input type="number" name="prioridad" id="prioridad" class="form-control" formControlName="prioridad"
+            [(ngModel)]="prioridadInput">
+        </div>
+      </form>
+      <!-- Boton -->
+      <button class="btn btn-danger" (click)="onSubmit()">Agregar</button>
+    </div>
+  </div>
+</div>
